@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Caçador de leads" content="width=device-width, initial-scale=1.0">
+    <title>Caçador de Leads</title>
+</head>
+<body>
+    <header>
+        <h1>Caçador de Leads</h1>
+    </header>
+    <main>
+        <section id="form1">
+        <form action="post" method="POST">
+        <!-- Adicione os campos do formulário aqui -->
+         <label for="nomeEmpresa">Nome da Empresa:</label>
+         <input type="text" name="nomeEmpresa" placeholder="Amazon" required id="nomeEmpresa"> 
+
+         <label for="cidade">Cidade:</label>
+
+         <input type="text" name="cidade" placeholder="São Paulo" required id="cidade">
+
+         <label for="telefone">Telefone:</label>
+
+         <input type="text" name="telefone" placeholder="(xx) xxxx-xxxx" required id="telefone">
+
+         <label for="site">Site:</label>
+
+         <input type="text" name="site" placeholder="Site da Empresa" required id="site">
+
+         <label for="status">Status:</label>
+
+         <select name="status" id="status"><option value="pendente">Pendente</option>
+            <option value="contatado">Contatado</option>
+            <option value="cliente">cliente</option>
+            <option value="todos">todos</option>
+        </select>
+            
+            <button type="submit">Adicionar</button>
+    </form>
+    </section>
+    <section name="lista" id="lista1">
+        <h2>Lista de Leads</h2>
+        <!-- Adicione a lista de leads aqui -->
+         <table>
+            <thead>
+                <tr>
+                    <th>Nome da Empresa</th>
+                    <th>Cidade</th>
+                    <th>Telefone</th>
+                    <th>Site</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+         </table>
+    </section>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>
