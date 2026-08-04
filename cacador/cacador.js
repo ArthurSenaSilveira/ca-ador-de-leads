@@ -38,9 +38,6 @@ form.addEventListener('submit', (event) => {
 
     empresas.push(empresa);
     renderizarEmpresas();
-    //console.log(empresas);
-
-    //console.log(empresas.length);
 });
 
 
@@ -54,7 +51,40 @@ function renderizarEmpresas() {
     listaEmpresas.innerHTML = "";
 
     empresas.forEach(empresa => { 
-        console.log(empresa);
-    
+        const linha = document.createElement("tr");
+        
+        const colunaNome = document.createElement("td");
+        
+        colunaNome.textContent = empresa.nomeEmpresa;
+
+        linha.appendChild(colunaNome);
+        
+        const colunaCidade = document.createElement("td");
+
+        colunaCidade.textContent = empresa.cidade;
+
+        linha.appendChild(colunaCidade);
+
+        const colunaTelefone = document.createElement("td");
+
+        colunaTelefone.textContent = empresa.telefone;
+
+        linha.appendChild(colunaTelefone);
+
+        const colunaSite = document.createElement("td");
+
+        colunaSite.textContent = empresa.site;
+
+        linha.appendChild(colunaSite);
+
+        const colunaStatus = document.createElement("td");
+
+        colunaStatus.textContent = empresa.status;
+
+        linha.appendChild(colunaStatus);
+
+
+       
+        listaEmpresas.appendChild(linha);
 });
 }
