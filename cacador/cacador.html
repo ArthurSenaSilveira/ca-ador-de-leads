@@ -10,8 +10,8 @@
         <h1>Caçador de Leads</h1>
     </header>
     <main>
-        <section id="form1">
-        <form action="post" method="POST">
+        <section>
+        <form action="/cadastro" method="POST"  id="form1">
         <!-- Adicione os campos do formulário aqui -->
          <label for="nomeEmpresa">Nome da Empresa:</label>
          <input type="text" name="nomeEmpresa" placeholder="Amazon" required id="nomeEmpresa"> 
@@ -53,11 +53,14 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="listaEmpresas"></tbody>
          </table>
     </section>
     </main>
     <footer></footer>
     
+
+    <script src="cacador.js">
+    </script>
 </body>
 </html>
