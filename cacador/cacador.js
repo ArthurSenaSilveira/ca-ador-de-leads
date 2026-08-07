@@ -33,7 +33,7 @@ form.addEventListener('submit', (event) => {
         cidade: cidade.value,
         telefone: telefone.value,
         site: site.value,
-        status: status.value
+        status: status.value,
     };
 
     empresas.push(empresa);
@@ -50,7 +50,7 @@ form.addEventListener('submit', (event) => {
 function renderizarEmpresas() {
     listaEmpresas.innerHTML = "";
 
-    empresas.forEach(empresa => { 
+    empresas.forEach((empresa, indice) => { 
         const linha = document.createElement("tr");
         
         const colunaNome = document.createElement("td");
@@ -83,8 +83,28 @@ function renderizarEmpresas() {
 
         linha.appendChild(colunaStatus);
 
+        const colunaAcoes = document.createElement("td");
+
+        linha.appendChild(colunaAcoes);
+
+        const botaoEditar = document.createElement("button");
+
+        botaoEditar.textContent = "Excluir";
+
+        colunaAcoes.appendChild(botaoEditar);
+
+        botaoEditar.addEventListener('click', () => {
+            empresas.splice(indice, 1);
+            renderizarEmpresas();
+    
+    })
 
        
         listaEmpresas.appendChild(linha);
 });
 }
+
+
+// dica: Para excluir uma empresa da lista, você pode usar o método `splice` do array `empresas`. Aqui está um exemplo de como você pode implementar a funcionalidade de exclusão:
+
+//array.splice(indice, quantidade);
